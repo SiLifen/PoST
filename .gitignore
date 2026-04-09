@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+wandb/
+output*/
+PaulGrahamEssays/
+mqar_results/
+/tmp/
+
+# Generated images
+*.png
+figs/*.png
+
+# Output
+output/

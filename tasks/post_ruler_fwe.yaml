@@ -1,0 +1,8 @@
+include: _post_ruler_base.yaml
+task: post_ruler_fwe
+custom_dataset: !function fwe_utils.fwe_download
+generation_kwargs:
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 50
+  until: []

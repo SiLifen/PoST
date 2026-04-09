@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\caption{\textbf{MQAR capacity accuracy (\%)} at each test length $T$ with $K{=}T/4$ key--value pairs.
+All models trained at $T{=}512$; longer lengths are out-of-distribution.
+The 1$\times$ column ($T{=}512$) reports in-distribution accuracy from the \texttt{input\_seq\_len} metric.
+GLA\,PoST and RetNet\,PoST converge to the same model under the PoST parameterization.}
+\label{tab:mqar}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}l ccccc ccccc ccccc @{}}
+\toprule
+ & \multicolumn{5}{c}{state$=64K$} & \multicolumn{5}{c}{state$=32K$} & \multicolumn{5}{c}{state$=16K$} \\
+\cmidrule(lr){2-6} \cmidrule(lr){7-11} \cmidrule(lr){12-16}
+\textbf{Model} & 512 & 1K & 2K & 4K & Avg & 512 & 1K & 2K & 4K & Avg & 512 & 1K & 2K & 4K & Avg \\
+\midrule
+Mamba-2              & 100.0 & 96.8 & 62.2 & 18.9 & 69.5 & 99.2 & 85.2 & 41.3 & 11.6 & 59.4 & 99.3 & 80.6 & 31.2 & 5.7 & 54.2 \\
+$\quad$+PoST       & \textbf{100.0} & \textbf{97.4} & \textbf{68.3} & \textbf{25.1} & \textbf{72.7} & \textbf{99.8} & \textbf{92.1} & \textbf{51.6} & \textbf{13.2} & \textbf{64.2} & \textbf{99.6} & \textbf{87.8} & \textbf{44.1} & \textbf{12.7} & \textbf{61.0} \\
+\midrule
+RWKV-7               & \textbf{100.0} & \textbf{100.0} & 96.1 & 39.2 & 83.8 & \textbf{100.0} & 100.0 & 80.1 & 9.5 & 72.4 & \textbf{100.0} & 95.2 & 46.0 & 10.8 & 63.0 \\
+$\quad$+PoST       & \textbf{100.0} & \textbf{100.0} & \textbf{98.5} & \textbf{52.9} & \textbf{87.8} & \textbf{100.0} & \textbf{100.0} & \textbf{98.0} & \textbf{28.5} & \textbf{81.6} & 100.0 & \textbf{99.3} & \textbf{70.9} & \textbf{18.8} & \textbf{72.2} \\
+\midrule
+GDN                  & \textbf{100.0} & 100.0 & 92.0 & 42.4 & 83.6 & 100.0 & 96.4 & 56.7 & 15.9 & 67.2 & 99.8 & 82.7 & 31.7 & 7.4 & 55.4 \\
+$\quad$+PoST       & \textbf{100.0} & \textbf{100.0} & \textbf{95.3} & \textbf{48.4} & \textbf{85.9} & \textbf{100.0} & \textbf{99.9} & \textbf{88.9} & \textbf{39.6} & \textbf{82.1} & \textbf{99.9} & \textbf{86.5} & \textbf{35.7} & \textbf{8.7} & \textbf{57.7} \\
+\midrule
+GLA                  & \textbf{100.0} & \textbf{97.8} & \textbf{67.2} & \textbf{20.8} & \textbf{71.5} & \textbf{100.0} & \textbf{97.7} & 50.3 & 7.6 & 63.9 & 99.8 & 88.5 & 38.7 & 7.8 & 58.7 \\
+$\quad$+PoST       & 100.0 & 96.0 & 62.1 & 20.7 & 69.7 & 99.9 & 93.9 & \textbf{54.8} & \textbf{16.9} & \textbf{66.4} & \textbf{99.9} & \textbf{93.1} & \textbf{50.7} & \textbf{12.2} & \textbf{64.0} \\
+\midrule
+RetNet               & 99.9 & 47.1 & 2.3 & 0.0 & 37.3 & 99.9 & 63.2 & 6.0 & 0.3 & 42.3 & 96.8 & 16.8 & 0.7 & 0.0 & 28.6 \\
+$\quad$+PoST       & \textbf{100.0} & \textbf{96.0} & \textbf{62.1} & \textbf{20.7} & \textbf{69.7} & \textbf{99.9} & \textbf{93.9} & \textbf{54.8} & \textbf{16.9} & \textbf{66.4} & \textbf{99.9} & \textbf{93.1} & \textbf{50.7} & \textbf{12.2} & \textbf{64.0} \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

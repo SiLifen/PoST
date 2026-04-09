@@ -1,0 +1,18 @@
+include: _post_ruler_base.yaml
+task: post_ruler_qa_squad
+custom_dataset: !function qa_utils.get_squad
+process_results: !function common_utils.process_results_part
+metric_list:
+  - metric: "4096"
+    aggregation: !function common_utils.aggregate_metrics
+    higher_is_better: true
+generation_kwargs:
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 32
+  until: []
+metadata:
+  version: 1.0
+  tokenizer: meta-llama/Llama-3.1-8B
+  max_seq_lengths:
+    - 4096
