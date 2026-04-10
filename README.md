@@ -194,3 +194,16 @@ python figures_scripts/plot_heatmap.py \
 ```
 
 Each checkpoint directory should contain `mamba2/mamba2/model.safetensors` and `mamba2_post/mamba2_post/model.safetensors`.
+
+## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{cao2026post,
+      title={Optimal Decay Spectra for Linear Recurrences},
+      author={Yang Cao},
+      journal={arXiv preprint arXiv:2604.07658},
+      year={2026}
+}
+```

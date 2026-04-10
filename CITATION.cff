@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Optimal Decay Spectra for Linear Recurrences"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - given-names: Yang
+    family-names: Cao
+preferred-citation:
+  type: article
+  title: "Optimal Decay Spectra for Linear Recurrences"
+  authors:
+    - given-names: Yang
+      family-names: Cao
+  journal: "arXiv preprint arXiv:2604.07658"
+  year: 2026
+  url: "https://arxiv.org/abs/2604.07658"
